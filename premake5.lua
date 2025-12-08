@@ -73,7 +73,7 @@ project "freetype"
 		systemversion "latest"
 
 	filter "system:macosx"
-		defines { "TARGET_OS_MAC" }
+		buildoptions { "-include CoreFoundation/CFBase.h" }
 
 	filter "configurations:Debug"
 		runtime "Debug"
